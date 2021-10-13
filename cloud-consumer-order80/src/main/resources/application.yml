@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+eureka:
+  client:
+    #false表示不把自己像注册中心注册
+    register-with-eureka: true
+    #false表示自己端就是注册中心，我的职责是维护服务实例，不需要去检索服务
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka    #别忘了缩进2格  集群也就是再多注册一个地址
+
+

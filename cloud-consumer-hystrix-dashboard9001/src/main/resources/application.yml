@@ -1,0 +1,9 @@
+server:
+  port: 9001
+
+  #从这
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"
+
+#   到这不写的话，它不能连接到指定网址
